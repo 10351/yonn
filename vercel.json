@@ -11,7 +11,7 @@
             "src": "/public/**",
             "use": "vercel-php@0.6.2"
         },
-        {"src": "artisan","use": "@vercel/php","config": {"command": "php artisan migrate --force"}}
+        {"src": "artisan","use": "vercel-php@0.6.2","config": {"command": "php artisan migrate --force"}}
     ],
     "routes": [
         {
