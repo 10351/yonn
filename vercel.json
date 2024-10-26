@@ -1,7 +1,5 @@
 {
-    "regions": [
-        "hnd1"
-    ],
+    "regions": ["hnd1"],
     "builds": [
         {
             "src": "/api/index.php",
@@ -9,9 +7,16 @@
         },
         {
             "src": "/public/**",
-            "use": "vercel-php@0.6.2"
+            "use": "@vercel/static"
         },
-        {"src": "artisan","use": "vercel-php@0.6.2","config": {"command": "php artisan migrate --force"}}
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build"
+        },
+        {
+            "src": "/resources/**",
+            "use": "@vercel/static"
+        }
     ],
     "routes": [
         {
